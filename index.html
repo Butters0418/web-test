@@ -82,16 +82,25 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img loading="lazy" class="pc" src="img/banner01.jpg" alt="banner01" />
-            <img loading="lazy" class="mb" src="img/banner01-m.jpg" alt="banner01-m" />
+            <!-- Required swiper-lazy class and image source specified in data-src attribute -->
+            <img data-src="img/banner01.jpg" class="pc swiper-lazy">
+            <img data-src="img/banner01-m.jpg" class="mb swiper-lazy">
+            <!-- Preloader image -->
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" class="pc" src="img/banner02.jpg" alt="banner02" />
-            <img loading="lazy" class="mb" src="img/banner02-m.jpg" alt="banner02-m" />
+            <!-- Required swiper-lazy class and image source specified in data-src attribute -->
+            <img data-src="img/banner02.jpg" class="pc swiper-lazy">
+            <img data-src="img/banner02-m.jpg" class="mb swiper-lazy">
+            <!-- Preloader image -->
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" class="pc" src="img/banner03.jpg" alt="banner03" />
-            <img loading="lazy" class="mb" src="img/banner03-m.jpg" alt="banner03-m" />
+            <!-- Required swiper-lazy class and image source specified in data-src attribute -->
+            <img data-src="img/banner03.jpg" class="pc swiper-lazy">
+            <img data-src="img/banner03-m.jpg" class="mb swiper-lazy">
+            <!-- Preloader image -->
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           </div>
         </div>
         <!-- Add Pagination -->
@@ -141,6 +150,7 @@
   <script>
     $(function () {
       var swiper = new Swiper('.swiper-container', {
+        lazy: true,
         pagination: {
           el: '.swiper-pagination',
         },
