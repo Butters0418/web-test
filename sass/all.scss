@@ -1,5 +1,4 @@
-@import "init";
-
+@import 'init';
 .pc {
   @include media($pad) {
     display: none;
@@ -12,6 +11,8 @@
     display: block;
   }
 }
-.main {
-  height: 1000px;
+
+.swiper-container img {
+  width: 100%;
+  max-width: none;
 }
