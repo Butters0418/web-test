@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+// @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
 
 body,
 div,
@@ -23,8 +23,7 @@ body {
   position: relative;
   padding-right: 0 !important; //modal 開啟抖動bug
   -webkit-overflow-scrolling: touch; // ios滑動效果
-  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 .modal-open {
   overflow: initial !important; //modal 開啟抖動bug
