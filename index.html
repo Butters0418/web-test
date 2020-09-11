@@ -78,12 +78,21 @@
 
   <!-- Main -->
   <div class="main">
-    <div class="container">
+    <div class="banner">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/banner01.jpg"></div>
-          <div class="swiper-slide"><img src="img/banner02.jpg"></div>
-          <div class="swiper-slide"><img src="img/banner03.jpg"></div>
+          <div class="swiper-slide">
+            <img class="pc" src="img/banner01.jpg" alt="banner01" />
+            <img class="mb" src="img/banner01-m.jpg" alt="banner01-m" />
+          </div>
+          <div class="swiper-slide">
+            <img class="pc" src="img/banner02.jpg" alt="banner02" />
+            <img class="mb" src="img/banner02-m.jpg" alt="banner02-m" />
+          </div>
+          <div class="swiper-slide">
+            <img class="pc" src="img/banner03.jpg" alt="banner03" />
+            <img class="mb" src="img/banner03-m.jpg" alt="banner03-m" />
+          </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -130,11 +139,13 @@
   <script type="text/javascript" src="js/day.min.js"></script>
   <script type="text/javascript" src="js/all.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+    $(function () {
+      var swiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+    })
   </script>
 </body>
 
