@@ -11,18 +11,12 @@
     display: block;
   }
 }
-.banner {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-.container {
-  .lazy {
-    display: block;
-    width: 255px;
-    height: 255px;
-    @include media($mobile) {
-      width: 180px;
-      height: 180px;
-    }
+.lazy {
+  display: block;
+  width: 255px;
+  height: 255px;
+  @include media($mobile) {
+    width: 180px;
+    height: 180px;
   }
 }

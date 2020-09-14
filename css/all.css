@@ -476,19 +476,14 @@ img {
   }
 }
 
-.banner {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-.container .lazy {
+.lazy {
   display: block;
   width: 255px;
   height: 255px;
 }
 
 @media screen and (max-width: 575.98px) {
-  .container .lazy {
+  .lazy {
     width: 180px;
     height: 180px;
   }
