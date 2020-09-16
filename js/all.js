@@ -10,27 +10,25 @@ $(function () {
 
   // [右邊選單]
   var $rightNav = $('.sidenav--right');
-  // [右邊選單]--// 側選單是
+  // [右邊選單]--// 側選單是否存在
   var $sidenavTop = $rightNav.length > 0 ? $rightNav.offset().top : 0;
   // [右邊選單]--// 手機版置頂
   function rightnavFixedTop() {
     var $windowTop = $(window).scrollTop();
     if ($windowTop > $sidenavTop) {
       $sidenav.addClass('fixed');
+      $('.main').addClass('addPadding')
     }
     else {
       $sidenav.removeClass('fixed');
+      $('.main').removeClass('addPadding')
     }
   }
 
   // [右邊GoTop]--// 滾動出現
-  function rightBox() {
+  function goTopShow() {
     var $windowTop = $(window).scrollTop();
-    if ($windowTop >= 1) {
-      $('.right__box').fadeIn(300);
-    } else {
-      $('.right__box').fadeOut(300);
-    }
+    $windowTop >= 100 ? $('.gotop').addClass('show') : $('.gotop').removeClass('show');
   }
   // [右邊GoTop]--// gotop
   $('.gotop').on('click', function () {
@@ -50,10 +48,76 @@ $(function () {
   });
 
 
-  $(window).on('scroll', function () {
-    rightBox();
-    $(window).width() < 768 && rightnavFixedTop();
+  //bank tabs slider
+  var bankSwiper = new Swiper('#section1 .swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    simulateTouch: false,
+    breakpoints: {
+      1199: {
+        simulateTouch: 'true',
+        slidesPerView: 'auto',
+      },
+      575: {
+        spaceBetween: 5,
+        slidesPerView: 'auto',
+      }
+    }
+  });
+
+  //bank tabs slider
+  var paySwiper = new Swiper('#section2 .swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    simulateTouch: false,
+    breakpoints: {
+      1199: {
+        simulateTouch: 'true',
+        slidesPerView: 'auto',
+      },
+      575: {
+        spaceBetween: 5,
+        slidesPerView: 'auto',
+      }
+    }
+  });
+
+
+
+  // 銀行儲值hover
+  var nowValue = 'bank1';
+  $('.bank-tab').on('mouseover', '.swiper-slide', function () {
+    var thisValue = $(this).data('value');
+    $(this).addClass('now').siblings().removeClass('now')
+    if (thisValue === nowValue) {
+      return
+    } else {
+      nowValue = thisValue;
+      slidePanes();
+    }
   })
+  function slidePanes() {
+    var currentPane = $('.pane').filter(function () {
+      return $(this).data('class') === nowValue;
+    })
+    var bankPaneContainer = $('.bank-pane .container-fluid');
+    currentPane.length > 1 ? bankPaneContainer.addClass('middleLine') : bankPaneContainer.removeClass('middleLine')
+    $('.pane').addClass('d-none').removeClass('fadeInLeft');
+    currentPane.each(function (index, item) {
+      $(this).removeClass('d-none').addClass('fadeInLeft')
+      index === 1 && $(this).addClass('pane-mt')
+    })
+  }
+  //bank hover init
+  $('.bank-tab .swiper-slide').eq(0).addClass('now');
+  slidePanes()
+
+
+
+  $(window).on('scroll', function () {
+    goTopShow();
+    $(window).width() < 768 && rightnavFixedTop();
+  }).scroll();
 
 
 

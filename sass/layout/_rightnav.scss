@@ -28,7 +28,7 @@ $color-sideHover: #009ce1;
     //箭頭
     &::before,
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       width: 20px;
@@ -159,8 +159,9 @@ $color-sideHover: #009ce1;
     &.fixed {
       position: fixed;
       top: 0;
-      box-shadow: 0 0 15px rgba(#000, 0.5);
+      box-shadow: 0 0 10px rgba(#000, 0.3);
       z-index: 50;
+      transition: 0.3s;
     }
   }
 }
