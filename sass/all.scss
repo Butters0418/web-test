@@ -41,6 +41,8 @@ body {
   background-image: url('../img/10banner.png');
   background-repeat: no-repeat;
   background-position: top center;
+  position: relative;
+  overflow: hidden;
   @media screen and(max-width: 1920px) {
     height: 750px;
     background-size: 1920px;
@@ -51,7 +53,68 @@ body {
     height: 92vw;
   }
 }
-
+.balloon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  &:nth-child(1) {
+    transform: translate(870px, 50px);
+    z-index: 5;
+    @media screen and(max-width: 1920px) {
+      transform: translate(760px, 30px);
+      max-width: 150px;
+    }
+    @include media($pad) {
+      display: none;
+    }
+  }
+  &:nth-child(2) {
+    transform: translate(1050px, 180px);
+    z-index: 10;
+    @media screen and(max-width: 1920px) {
+      display: none;
+    }
+  }
+  &:nth-child(3) {
+    transform: translate(870px, 350px);
+    z-index: 15;
+    @media screen and(max-width: 1920px) {
+      transform: translate(760px, 230px);
+      max-width: 150px;
+    }
+    @include media($pad) {
+      display: none;
+    }
+  }
+  &:nth-child(4) {
+    transform: translate(700px, 200px);
+    z-index: 10;
+    @media screen and(max-width: 1920px) {
+      transform: translate(600px, 130px);
+      max-width: 150px;
+    }
+    @include media($pad) {
+      transform: none;
+      top: 20%;
+      left: auto;
+      right: 1%;
+      max-width: 23%;
+    }
+  }
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-700px, -200px);
+  @media screen and(max-width: 1920px) {
+    transform: translate(-550px, -200px);
+    max-width: 120px;
+  }
+  @include media($pad) {
+    display: none;
+  }
+}
 .all-sections {
   padding: 0px 15px 40px;
   margin-top: -30px;

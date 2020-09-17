@@ -82,8 +82,6 @@ $(function () {
     }
   });
 
-
-
   // 銀行儲值hover
   var nowValue = 'bank1';
   $('.bank-tab').on('mouseover', '.swiper-slide', function () {
@@ -113,12 +111,29 @@ $(function () {
   slidePanes()
 
 
+  //banner ani
+  $('.balloon').each(function (index) {
+    gsap.to($(this), { duration: 4, y: '-=15', repeat: -1, yoyo: true, ease: "power1.inOut", delay: -index * 0.5 })
+  })
+
+  // box animation for >768
+  var $box = $('.box');
+  function boxAni() {
+    var tl = gsap.timeline();
+    tl.to($box, { duration: 5, y: 10, ease: "back.out(1.7)" })
+      .to($box, { duration: 2.5, y: 40, repeat: -1, yoyo: true, ease: 'none' })
+      .to($box, { duration: 2, rotation: 20, repeat: -1, yoyo: true, ease: 'none' }, 0)
+  }
+  $(window).width() > 768 && boxAni();
 
   $(window).on('scroll', function () {
     goTopShow();
     $(window).width() < 768 && rightnavFixedTop();
   }).scroll();
 
-
+  // 隨機整數 包含 min & mix
+  function R(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 });
