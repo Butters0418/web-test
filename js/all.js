@@ -41,7 +41,7 @@ $(function () {
     var headerH = $('.header').height();
     var sidenavH = $('.sidenav').height();
     var targetTop = $($(this).attr('href')).offset().top;
-    var scrollPos = $(window).width() >= 768 ? targetTop : targetTop - headerH - sidenavH;
+    var scrollPos = $(window).width() >= 768 ? targetTop - 100 : targetTop - headerH - sidenavH;
     $('html, body').stop().animate({
       scrollTop: scrollPos
     }, 300);
