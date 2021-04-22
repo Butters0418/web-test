@@ -3,10 +3,10 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>10月優惠攻略頁【PChome24h購物】</title>
-  <meta name="title" content="10月優惠攻略頁【PChome24h購物】">
-  <meta name="keywords" content="10月優惠攻略頁、銀行、儲值、行動支付、P幣">
-  <meta name="description" content="10月優惠攻略頁">
+  <title>【PChome24h購物】設計組投票頁</title>
+  <meta name="title" content="【PChome24h購物】">
+  <meta name="keywords" content="APP,好康,PChome,24h,24h購物">
+  <meta name="description" content="台北市6小時到貨(試營運)，全台灣24小時到貨！">
   <meta property="og:title" content="【PChome24h購物】">
   <meta property="og:description" content="台北市6小時到貨(試營運)，全台灣24小時到貨！">
   <meta property="og:image" content="https://a.ecimg.tw/css/2016/style/images/v201607/sitelogo/h24.png">
@@ -26,21 +26,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <!--CSS-->
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-  <link tpye="text/css" rel="stylesheet" href="css/swiper.min.css">
-  <link tpye="text/css" rel="stylesheet" href="css/all.css">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135103791-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-135103791-1');
-  </script>
+  <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+  <link type="text/css" rel="stylesheet" href="css/all.css">
 
 </head>
 
@@ -75,254 +62,74 @@
       <a href="javascript:;"></a>
     </div>
     <ul class="sidenav__list">
-      <li><a href="#section1">神卡排行榜</a></li>
-      <li><a href="#section2">神卡排行榜</a></li>
-      <li><a href="#section3">神卡排行榜</a></li>
-      <li><a href="#section4">神卡排行榜</a></li>
-      <li><a href="#section5">神卡排行榜</a></li>
-      <li><a href="#section6">神卡排行榜</a></li>
+      <li><a href="#tag1">野餐好午休</a></li>
+      <li><a href="#tag2">結夥去露營</a></li>
+      <li><a href="#tag3">幸福樂時光</a></li>
+      <li><a href="#tag4">旅行放鬆趣</a></li>
+      <li><a href="#tag5">精選主題</a></li>
+      <li class="sidenav__img">
+        <a target="_blank" href=" https://shopping.pchome.com.tw/activity/collection.htm"><img src="img/sticker_right.jpg"></a>
+      </li>
     </ul>
   </div>
   <!--END Right nav -->
 
+
+
   <!-- Main -->
   <div class="main">
-
-    <!-- banner -->
-    <div class="banner">
-      <img class="balloon" src="img/10balloon1.png">
-      <img class="balloon" src="img/10balloon2.png">
-      <img class="balloon" src="img/10balloon3.png">
-      <img class="balloon" src="img/10balloon4.png">
-      <img class="box" src="img/10box.png">
+    <div class="container">
+      <!-- form -->
+      <div class="form" id="govote">
+        <h4 class="text-danger text-center">- 嚴禁灌票 (請使用外網or手機) -</h4>
+        <div class="form-row">
+          <div class="form-group col-md-12 mb-4">
+            <label for="employeeID">
+              <h4>請填寫您的員工編號</h4>
+            </label>
+            <input type="text" class="form-control" id="employeeID">
+          </div>
+          <div class="form-group col-md-12 mb-5">
+            <label for="edmVote">
+              <h4>選擇您喜愛的EDM</h4>
+            </label>
+            <select id="edmVote" class="form-control">
+              <option value selected="selected" disabled>請選擇項目</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form-group col-md-12 mb-5">
+            <label for="roadVote">
+              <h4>選擇您喜愛的路標頁</h4>
+            </label>
+            <select id="roadVote" class="form-control">
+              <option value selected="selected" disabled>請選擇項目</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form-group col-md-12 mb-5">
+            <label for="fullSiteVote">
+              <h4>選擇您喜愛的全站</h4>
+            </label>
+            <select id="fullSiteVote" class="form-control">
+              <option value selected="selected" disabled>請選擇項目</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="submit">送出</button>
+      </div>
+      <!-- END form -->
     </div>
-    <!-- END banner -->
-
-    <!-- all sections -->
-    <div class="all-sections">
-
-      <!--1. 銀行攻略 -->
-      <section id="section1">
-        <img class="section__bg" src="img/10section-title-bg.png">
-        <!-- max-wdith 1200px -->
-        <div class="section-content">
-          <div class="section-inner">
-            <!-- 標題 -->
-            <h3 class="section__title">神卡排行榜</h3>
-            <!-- 卡片標籤 (下方 js 編輯)-->
-            <div class="bank-tab swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide gray_box" data-value="bank1">
-                  <h5 class="text-center">筆筆<br>無腦刷</h5>
-                  <div class="bank-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </div>
-                <div class="swiper-slide gray_box" data-value="bank2">
-                  <h5 class="text-center">筆筆<br>無腦刷</h5>
-                  <div class="bank-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </div>
-                <div class="swiper-slide gray_box" data-value="bank3">
-                  <h5 class="text-center">筆筆<br>無腦刷</h5>
-                  <div class="bank-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </div>
-                <div class="swiper-slide gray_box" data-value="bank4">
-                  <h5 class="text-center">筆筆<br>無腦刷</h5>
-                  <div class="bank-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </div>
-                <div class="swiper-slide gray_box" data-value="bank5">
-                  <h5 class="text-center">筆筆<br>無腦刷</h5>
-                  <div class="bank-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </div>
-                <div class="swiper-slide gray_box" data-value="bank6">
-                  <h5 class="text-center">筆筆<br>無腦刷</h5>
-                  <div class="bank-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 標籤面版 (下方 js 編輯)-->
-            <div class="bank-pane gray_box">
-              <div class="container-fluid p-0">
-                <div class="row justify-content-center">
-                </div>
-              </div>
-            </div>
-            <!-- END 標籤面版 -->
-          </div>
-        </div>
-      </section>
-      <!-- END 銀行攻略 -->
-
-      <!--2. 儲值攻略 -->
-      <section id="section2">
-        <img class="section__bg" src="img/10section-title-bg.png">
-        <!-- max-wdith 1200px -->
-        <div class="section-content">
-          <div class="section-inner">
-            <!-- 標題 -->
-            <h3 class="section__title">神卡排行榜</h3>
-            <!-- 卡片標籤 (下方 js 編輯)-->
-            <div class="pay-tab swiper-container">
-              <div class="swiper-wrapper">
-                <a href="javascript:;" class="swiper-slide gray_box" target="_blank">
-                  <h3 class="text-center">6/1-6/5</h3>
-                  <h5 class="text-center">筆筆無腦刷</h5>
-                  <div class="pay-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </a>
-                <a href="javascript:;" class="swiper-slide gray_box" target="_blank">
-                  <h3 class="text-center">6/1-6/5</h3>
-                  <h5 class="text-center">筆筆無腦刷</h5>
-                  <div class="pay-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </a>
-                <a href="javascript:;" class="swiper-slide gray_box" target="_blank">
-                  <h3 class="text-center">6/1-6/5</h3>
-                  <h5 class="text-center">筆筆無腦刷</h5>
-                  <div class="pay-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </a>
-                <a href="javascript:;" class="swiper-slide gray_box" target="_blank">
-                  <h3 class="text-center">6/1-6/5</h3>
-                  <h5 class="text-center">筆筆無腦刷</h5>
-                  <div class="pay-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </a>
-                <a href="javascript:;" class="swiper-slide gray_box" target="_blank">
-                  <h3 class="text-center">6/1-6/5</h3>
-                  <h5 class="text-center">筆筆無腦刷</h5>
-                  <div class="pay-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </a>
-                <a href="javascript:;" class="swiper-slide gray_box" target="_blank">
-                  <h3 class="text-center">6/1-6/5</h3>
-                  <h5 class="text-center">筆筆無腦刷</h5>
-                  <div class="pay-tab__bot">
-                    <p class="left">最高<br>回饋</p>
-                    <p class="right">13%</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END 儲值攻略 -->
-
-      <!--3. 銀行icon -->
-      <section id="section3">
-        <img class="section__bg" src="img/10section-title-bg.png">
-        <!-- max-wdith 1200px -->
-        <div class="section-content">
-          <div class="section-inner">
-            <!-- 標題 -->
-            <h3 class="section__title">神卡排行榜</h3>
-            <!-- 銀行 icon -->
-            <div class="bank__icon row">
-              <!-- <div class="col-1-5">
-                    <a class="bank__icon--link" href="javascript:;">
-                      <img src="img/icon_citi.png" alt="花旗銀行">
-                      <p class="bank__icon--name">花旗銀行</p>
-                    </a>
-                  </div> -->
-            </div>
-          </div>
-      </section>
-
-      <!--4. 支付攻略 -->
-      <section id="section4">
-        <img class="section__bg" src="img/10section-title-bg.png">
-        <!-- max-wdith 1200px -->
-        <div class="section-content">
-          <div class="section-inner">
-            <!-- 標題 -->
-            <h3 class="section__title">神卡排行榜</h3>
-            <div class="all-pay row">
-              <!-- <div class="col-6 col-md-4">
-                  <a class="gray_box" href="javascript:;"><img src="img/pay1.png"></a>
-                </div> -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--5. p幣優惠 -->
-      <section id="section5">
-        <img class="section__bg" src="img/10section-title-bg.png">
-        <!-- max-wdith 1200px -->
-        <div class="section-content">
-          <div class="section-inner">
-            <!-- 標題 -->
-            <h3 class="section__title">神卡排行榜</h3>
-            <div class="pcoin">
-              <a href="javascript:;"><img src="img/02pcoin.png"></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--6. 熱門活動 -->
-      <section id="section6">
-        <img class="section__bg" src="img/10section-title-bg.png">
-        <!-- max-wdith 1200px -->
-        <div class="section-content">
-          <div class="section-inner">
-            <!-- 標題 -->
-            <h3 class="section__title">神卡排行榜</h3>
-            <div class="hotact row">
-              <div class="col-6">
-                <a class="gray_box" href="javascript:;">
-                  <img src="img/hotact_01.png">
-                </a>
-              </div>
-              <div class="col-6">
-                <a class="gray_box" href="javascript:;">
-                  <img src="img/hotact_01.png">
-                </a>
-              </div>
-              <div class="col-6">
-                <a class="gray_box" href="javascript:;">
-                  <img src="img/hotact_01.png">
-                </a>
-              </div>
-              <div class="col-6">
-                <a class="gray_box" href="javascript:;">
-                  <img src="img/hotact_01.png">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-    <!-- END all sections -->
   </div>
   <!-- END Main -->
 
@@ -356,357 +163,71 @@
 
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery.lazy.min.js"></script> -->
   <script type="text/javascript" src="js/swiper.min.js"></script>
-  <script type="text/javascript" src="js/gsap.min.js"></script>
-  <script>
-    ; (function () {
-      // ================================ 自行編輯區 =====================================
-
-      // [各個大標]
-      var secitonTitle = [
-        '神卡排行榜1',
-        '神卡排行榜2',
-        '神卡排行榜3',
-        '神卡排行榜4',
-        '神卡排行榜5',
-        '神卡排行榜6',
-      ]
-
-      // [1.銀行] 上方卡片
-      var bankTabData = [
-        {
-          title: '筆筆<br>無腦刷1',
-          percent: '13.5%'
-        },
-        {
-          title: '筆筆<br>無腦刷2',
-          percent: '13%'
-        },
-        {
-          title: '筆筆<br>無腦刷3',
-          percent: '12%'
-        },
-        {
-          title: '筆筆<br>無腦刷4',
-          percent: '11%'
-        },
-        {
-          title: '筆筆<br>無腦刷5',
-          percent: '10%'
-        },
-        {
-          title: '筆筆<br>無腦刷6',
-          percent: '12%'
-        },
-      ]
-
-      // [1.銀行] 下方面版，class 輸入此面版屬於哪張卡片
-      var bankPaneData = [
-        {
-          class: 'bank1',
-          img: 'bank_card1.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.1%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank1',
-          img: 'bank_card2.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.2%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank2',
-          img: 'bank_card3.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank3',
-          img: 'bank_card3.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank3',
-          img: 'bank_card3.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank4',
-          img: 'bank_card3.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank5',
-          img: 'bank_card4.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank5',
-          img: 'bank_card5.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          class: 'bank6',
-          img: 'bank_card6.png',
-          title: '玉山銀行<br>Pi 拍錢包卡',
-          percent: '8.3%',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-      ]
-
-      // [2.儲值] 上方卡片
-      var payTabData = [
-        {
-          date: '9/14-9/21',
-          title: '儲值3500',
-          percent: '200',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          date: '9/14-9/22',
-          title: '儲值4500',
-          percent: '300',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          date: '9/14-9/23',
-          title: '儲值5500',
-          percent: '500',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          date: '9/14-9/24',
-          title: '儲值6500',
-          percent: '600',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          date: '9/14-9/25',
-          title: '儲值7500',
-          percent: '700',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-        {
-          date: '9/14-9/26',
-          title: '儲值8500',
-          percent: '800',
-          link: 'https://www.pchomeec.tw/activity/AC00051533#citi'
-        },
-      ]
-
-      // [3.銀行icon]
-      var bankIconData = [
-        {
-          link: 'javascript:;',
-          img: 'icon_citi.png',
-          name: '花旗銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_esun.png',
-          name: '玉山銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_taipei.png',
-          name: '台北富邦',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_taishin.png',
-          name: '台新銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_chinatrust.png',
-          name: '中國信託',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_cathay.png',
-          name: '國泰世華',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_yufu.png',
-          name: '永豐銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_ubt.png',
-          name: '聯邦銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_dbs.png',
-          name: '星展銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_hsbc.png',
-          name: '匯豐銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_firstbank.png',
-          name: '第一銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_kgi.png',
-          name: '凱基銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_standardchartered.png',
-          name: '渣打銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_zens.png',
-          name: '日盛銀行',
-        },
-        {
-          link: 'javascript:;',
-          img: 'icon_sunny.png',
-          name: '陽信銀行',
-        },
-      ]
-
-      // [4.各大支付]
-      var allpayData = [
-        {
-          link: 'javascript:;',
-          img: 'pay1.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'pay2.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'pay3.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'pay4.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'pay5.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'pay6.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'pay7.png',
-        },
-      ]
-
-      // [6.熱門活動區塊]
-      var hotactData = [
-        {
-          link: 'javascript:;',
-          img: 'hotact_01.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'hotact_02.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'hotact_03.png',
-        },
-        {
-          link: 'javascript:;',
-          img: 'hotact_04.png',
-        },
-      ]
-
-      // ================================END 自行編輯區 =====================================
-
-
-      // title html   
-      $('.section__title').each(function (index) {
-        $(this).text(secitonTitle[index]);
-      })
-
-      // bank-tab html
-      $('.bank-tab .swiper-slide').each(function (index) {
-        $(this).find('h5').html(bankTabData[index].title)
-        $(this).find('.right').text(bankTabData[index].percent)
-      })
-
-      // bank-pane html
-      var bankPaneHtml = function () {
-        var str = '';
-        for (var i = 0; i < bankPaneData.length; i++) {
-          str += '<div class="col-12 col-md-6 pane d-none" data-class="' + bankPaneData[i].class + '">';
-          str += '<div class="bank-pane__top"><div class="bank-pane__img"><img src="img/' + bankPaneData[i].img + '"></div>';
-          str += '<div class="bank-pane__text"><h5>' + bankPaneData[i].title + '</h5><div class="bank-pane__bot">';
-          str += ' <p class="left">最高<br>回饋</p><p class="right">' + bankPaneData[i].percent + '</p></div></div></div><p class="text-center mb-0">';
-          str += ' <p class="text-center mb-0"><a class="btn bank-pane__btn" href="' + bankPaneData[i].link + '">詳情</a></p></div>';
-        }
-        $('.bank-pane .row').html(str);
-      }();
-
-      // pay-tab html
-      $('.pay-tab .swiper-slide').each(function (index) {
-        $(this).attr('href', payTabData[index].link)
-        $(this).find('h3').html(payTabData[index].date)
-        $(this).find('h5').html(payTabData[index].title)
-        $(this).find('.right').text(payTabData[index].percent)
-      })
-
-      // 銀行icon html
-      var bankIcon = function () {
-        var str = '';
-        for (var i = 0; i < bankIconData.length; i++) {
-          str += '<div class="col-1-5"><a class="bank__icon--link" href="' + bankIconData[i].link + '" target="_blank">';
-          str += '<img src="img/' + bankIconData[i].img + '" alt="' + bankIconData[i].name + '">';
-          str += '<p class="bank__icon--name">' + bankIconData[i].name + '</p></a></div>'
-        }
-        $('.bank__icon').html(str);
-      }();
-
-      // allpay html
-      var allpayHtml = function () {
-        var str = '';
-        for (var i = 0; i < allpayData.length; i++) {
-          str += '<div class="col-6 col-md-4"><a class="gray_box" href="' + allpayData[i].link + '" target="_blank">';
-          str += '<img src="img/' + allpayData[i].img + '"></a></div >';
-        }
-        $('.all-pay').html(str);
-      }();
-
-      // hotact html
-      var hotactHtml = function () {
-        var str = '';
-        for (var i = 0; i < hotactData.length; i++) {
-          str += ' <div class="col-6"><a class="gray_box" href="' + hotactData[i].link + '" target="_blank">';
-          str += '<img src="img/' + hotactData[i].img + '"></a></div>'
-        }
-        $('.hotact').html(str);
-      }();
-
-    })();
-  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
+  <script type="text/javascript" src="js/day.min.js"></script>
   <script type="text/javascript" src="js/all.js"></script>
+  <script>
+    // post url
+    const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdP_mXHBvqo_42tPd5sEaRGFXzjUo8BcgBMEkyvQzMmP92q5Q/formResponse'
+    // const aa = 'entry.321503191';
+    // const bb = 'entry.452859415';
+    // const cc = 'entry.52850161';
+    // const dd = 'entry.342853326'
+    const submitBtn = document.querySelector('#submit');
+    const employeeID = document.querySelector('#employeeID')
+    const edmVote = document.querySelector('#edmVote')
+    const roadVote = document.querySelector('#roadVote')
+    const fullSiteVote = document.querySelector('#fullSiteVote')
+
+    function sendData() {
+      let data = {
+        'entry.321503191': employeeID.value,
+        'entry.452859415': edmVote.value,
+        'entry.52850161': roadVote.value,
+        'entry.342853326': fullSiteVote.value,
+      }
+      console.log(data);
+      axios.post(url, {
+        data: data
+      }).then(function (res) {
+        alert('成功')
+        console.log(res)
+      })
+      // $.ajax({
+      //   type: 'POST',
+      //   url: url,
+      //   data: data,
+      //   contentType: 'application/json',
+      //   dataType: 'jsonp',
+      //   complete: function () {
+      //     alert('資料已送出！');
+      //   }
+      // });
+    }
+
+
+    submitBtn.addEventListener('click', sendData)
+
+
+    const getUrl = 'https://spreadsheets.google.com/feeds/worksheets/1ODkQ4FNwpGZ5hLovbD8xy6DS07dtccxcDxVa_3cXT-Y/public/basic?alt=json'
+    function init() {
+      axios.get(getUrl).then(function (res) {
+        console.log(res.data)
+      })
+    }
+    init();
+  </script>
+  <!-- <script>
+    axios.post('https://script.google.com/macros/s/AKfycbzuH9eJCSjCnCuOqSFPPAx1oHeahUJZuqG15J1n/exec',{
+      data: {
+        
+      }
+    }).then(function (res) {
+      console.log(res)
+    })
+  </script> -->
 </body>
 
 </html>
