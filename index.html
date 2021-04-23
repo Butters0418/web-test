@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>【PChome24h購物】設計組投票頁</title>
+  <title>【PChome24h購物】投票頁</title>
   <meta name="title" content="【PChome24h購物】">
   <meta name="keywords" content="APP,好康,PChome,24h,24h購物">
   <meta name="description" content="台北市6小時到貨(試營運)，全台灣24小時到貨！">
@@ -25,8 +25,8 @@
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Pragma" content="no-cache">
   <!--CSS-->
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-  <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
   <link type="text/css" rel="stylesheet" href="css/all.css">
 
 </head>
@@ -56,178 +56,242 @@
   </div>
   <!-- END Header -->
 
-  <!-- Right nav -->
-  <div class="sidenav sidenav--right">
-    <div class="sidenav__btn">
-      <a href="javascript:;"></a>
-    </div>
-    <ul class="sidenav__list">
-      <li><a href="#tag1">野餐好午休</a></li>
-      <li><a href="#tag2">結夥去露營</a></li>
-      <li><a href="#tag3">幸福樂時光</a></li>
-      <li><a href="#tag4">旅行放鬆趣</a></li>
-      <li><a href="#tag5">精選主題</a></li>
-      <li class="sidenav__img">
-        <a target="_blank" href=" https://shopping.pchome.com.tw/activity/collection.htm"><img src="img/sticker_right.jpg"></a>
-      </li>
-    </ul>
-  </div>
-  <!--END Right nav -->
-
-
-
   <!-- Main -->
   <div class="main">
-    <div class="container">
-      <!-- form -->
-      <div class="form" id="govote">
-        <h4 class="text-danger text-center">- 嚴禁灌票 (請使用外網or手機) -</h4>
-        <div class="form-row">
-          <div class="form-group col-md-12 mb-4">
+    <!-- EDM -->
+    <section class="section1">
+      <div class="container ">
+        <h3 class="section-title">EDM</h3>
+        <div class="row">
+          <!-- in js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 路標頁 -->
+    <section class="section2">
+      <div class="container">
+        <h3 class="section-title">路標頁</h3>
+        <div class="row">
+          <!-- in js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 全站 -->
+    <section class="section3">
+      <div class="container">
+        <h3 class="section-title">全站活動</h3>
+        <div class="row">
+          <!-- in js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 表單 -->
+    <section class="section4">
+      <div class="container">
+        <p class="remind">請填寫自己喜愛的作品，一個類別一票，每個員編限投一次</p>
+        <p class="voteCount">目前投票人數:<span class="voteCountNum">0</span> 票</p>
+        <form class="form-row">
+          <div class="form-group col-md-12 mb-5">
             <label for="employeeID">
-              <h4>請填寫您的員工編號</h4>
+              <h4>請填寫您的員工編號 *</h4>
             </label>
-            <input type="text" class="form-control" id="employeeID">
+            <input type="text" class="form-control validate" placeholder="PCA12345" id="employeeID">
+            <p class="error-text"></p>
           </div>
           <div class="form-group col-md-12 mb-5">
             <label for="edmVote">
-              <h4>選擇您喜愛的EDM</h4>
+              <h4>選擇您喜愛的 EDM設計 *</h4>
             </label>
-            <select id="edmVote" class="form-control">
+            <select id="edmVote" class="form-control validate">
               <option value selected="selected" disabled>請選擇項目</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+
             </select>
+            <p class="error-text"></p>
           </div>
           <div class="form-group col-md-12 mb-5">
             <label for="roadVote">
-              <h4>選擇您喜愛的路標頁</h4>
+              <h4>選擇您喜愛的 路標頁設計 *</h4>
             </label>
-            <select id="roadVote" class="form-control">
+            <select id="roadVote" class="form-control validate">
               <option value selected="selected" disabled>請選擇項目</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="作品1">作品1</option>
+              <option value="作品2">作品2</option>
+              <option value="作品3">作品3</option>
+              <option value="作品4">作品4</option>
             </select>
+            <p class="error-text"></p>
           </div>
           <div class="form-group col-md-12 mb-5">
             <label for="fullSiteVote">
-              <h4>選擇您喜愛的全站</h4>
+              <h4>選擇您喜愛的 全站設計 *</h4>
             </label>
-            <select id="fullSiteVote" class="form-control">
+            <select id="fullSiteVote" class="form-control validate">
               <option value selected="selected" disabled>請選擇項目</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="作品1">作品1</option>
+              <option value="作品2">作品2</option>
+              <option value="作品3">作品3</option>
+              <option value="作品4">作品4</option>
             </select>
+            <p class="error-text"></p>
           </div>
-        </div>
-        <button class="btn btn-primary" id="submit">送出</button>
+          <button class="btn btn-warning w-100" id="submit">送 出</button>
+        </form>
       </div>
-      <!-- END form -->
-    </div>
+    </section>
+
   </div>
   <!-- END Main -->
 
-  <!-- Footer -->
-  <div class="footer">
-    <!-- 銀行標語 -->
-    <div class="bank-slogan">
-      <h4 class="bank-slogan__title">謹慎理財 信用至上</h4>
-      <p class="bank-slogan__text">本網頁所列各項行銷活動均由各發卡銀行提供，活動即時登錄情形及是否取得最終回饋資格請逕洽各活動發卡銀行</p>
-    </div>
-    <!-- PChome24h 標語 -->
-    <div class="pchome-slogan">
-      <ul class="footer__icon-list">
-        <li>追蹤我們</li>
-        <li><a href="https://www.facebook.com/pchome24h/" target="_blank"><img src="img/source/fb_new.svg"></a></li>
-        <li><a href="https://www.instagram.com/pchome24h/" target="_blank"><img src="img/source/ig_new.svg"></a></li>
-        <li><a href="https://www.youtube.com/channel/UCb2aGEzl5Ki5juwPolnC-PA" target="_blank"><img src="img/source/youtube_new.svg"></a></li>
-        <li><a href="https://line.me/R/ti/p/@pchome24h" target="_blank"><img src="img/source/line_new.svg"></a></li>
-      </ul>
-      <p class="pchome-slogan__text">本活動頁商品規格、顏色、價位、贈品如與銷售網頁不符，<span>以銷售網頁標示為準！</span><br /> 網路家庭版權所有 Copyright PChome Online
-        <span>版權所有，轉載必究</span>
-      </p>
-    </div>
-  </div>
-  <!-- END Footer -->
 
   <!-- Go Top & other sticker-->
   <div class="right__box">
     <div class="gotop"></div>
   </div>
 
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="js/jquery.lazy.min.js"></script> -->
-  <script type="text/javascript" src="js/swiper.min.js"></script>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
-  <script type="text/javascript" src="js/day.min.js"></script>
-  <script type="text/javascript" src="js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/normal.js"></script>
   <script>
-    // post url
-    const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdP_mXHBvqo_42tPd5sEaRGFXzjUo8BcgBMEkyvQzMmP92q5Q/formResponse'
-    // const aa = 'entry.321503191';
-    // const bb = 'entry.452859415';
-    // const cc = 'entry.52850161';
-    // const dd = 'entry.342853326'
-    const submitBtn = document.querySelector('#submit');
-    const employeeID = document.querySelector('#employeeID')
-    const edmVote = document.querySelector('#edmVote')
-    const roadVote = document.querySelector('#roadVote')
-    const fullSiteVote = document.querySelector('#fullSiteVote')
+    (function () {
+      // EDM images data
+      let img1Data = [
+        {
+          imgSmall: 'img/edm/a1_c.jpg',
+          imgLarge: 'img/edm/a1.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a2_c.jpg',
+          imgLarge: 'img/edm/a2.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a3_c.jpg',
+          imgLarge: 'img/edm/a3.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a4_c.jpg',
+          imgLarge: 'img/edm/a4.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a5_c.jpg',
+          imgLarge: 'img/edm/a5.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a6_c.jpg',
+          imgLarge: 'img/edm/a6.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a7_c.jpg',
+          imgLarge: 'img/edm/a7.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a8_c.jpg',
+          imgLarge: 'img/edm/a8.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a9_c.jpg',
+          imgLarge: 'img/edm/a9.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a10_c.jpg',
+          imgLarge: 'img/edm/a10.jpg',
+        },
+        {
+          imgSmall: 'img/edm/a11_c.jpg',
+          imgLarge: 'img/edm/a11.jpg',
+        },
+      ]
+      // 路標頁 images data
+      let img2Data = [
+        {
+          imgSmall: 'img/road/b1_c.jpg',
+          imgLarge: 'img/road/b1.jpg',
+        },
+        {
+          imgSmall: 'img/road/b2_c.jpg',
+          imgLarge: 'img/road/b2.jpg',
+        },
+        {
+          imgSmall: 'img/road/b3_c.jpg',
+          imgLarge: 'img/road/b3.jpg',
+        },
+        {
+          imgSmall: 'img/road/b4_c.jpg',
+          imgLarge: 'img/road/b4.jpg',
+        },
+        {
+          imgSmall: 'img/road/b5_c.jpg',
+          imgLarge: 'img/road/b5.jpg',
+        },
+        {
+          imgSmall: 'img/road/b6_c.jpg',
+          imgLarge: 'img/road/b6.jpg',
+        },
+        {
+          imgSmall: 'img/road/b7_c.jpg',
+          imgLarge: 'img/road/b7.jpg',
+        },
+        {
+          imgSmall: 'img/road/b8_c.jpg',
+          imgLarge: 'img/road/b8.jpg',
+        },
+        {
+          imgSmall: 'img/road/b9_c.jpg',
+          imgLarge: 'img/road/b9.jpg',
+        },
+        {
+          imgSmall: 'img/road/b10_c.jpg',
+          imgLarge: 'img/road/b10.jpg',
+        },
+        {
+          imgSmall: 'img/road/b11_c.jpg',
+          imgLarge: 'img/road/b11.jpg',
+        },
+        {
+          imgSmall: 'img/road/b12_c.jpg',
+          imgLarge: 'img/road/b12.jpg',
+        },
+      ]
 
-    function sendData() {
-      let data = {
-        'entry.321503191': employeeID.value,
-        'entry.452859415': edmVote.value,
-        'entry.52850161': roadVote.value,
-        'entry.342853326': fullSiteVote.value,
+      // DOM
+      const section1 = document.querySelector('.section1 .row');
+      const section2 = document.querySelector('.section2 .row');
+      const section3 = document.querySelector('.section3 .row');
+      const edmVote = document.querySelector('#edmVote');
+      const roadVote = document.querySelector('#roadVote');
+      const fullSiteVote = document.querySelector('#fullSiteVote');
+
+      // render data to html
+      function renderHTML(htmlDom, id, data) {
+        let str = '';
+        data.forEach(function (item, index) {
+          let caption = `作品${index + 1}`
+          str += `
+          <div class="col-md-3">
+            <a href="${item.imgLarge}" data-fancybox="images" data-caption="${caption}">
+              <img src="${item.imgSmall}">
+            </a>
+          </div>
+          `
+          let option = document.createElement('option');
+          option.setAttribute('value', caption);
+          option.textContent = caption;
+          id.append(option)
+        })
+        htmlDom.innerHTML = str;
       }
-      console.log(data);
-      axios.post(url, {
-        data: data
-      }).then(function (res) {
-        alert('成功')
-        console.log(res)
-      })
-      // $.ajax({
-      //   type: 'POST',
-      //   url: url,
-      //   data: data,
-      //   contentType: 'application/json',
-      //   dataType: 'jsonp',
-      //   complete: function () {
-      //     alert('資料已送出！');
-      //   }
-      // });
-    }
-
-
-    submitBtn.addEventListener('click', sendData)
-
-
-    const getUrl = 'https://spreadsheets.google.com/feeds/worksheets/1ODkQ4FNwpGZ5hLovbD8xy6DS07dtccxcDxVa_3cXT-Y/public/basic?alt=json'
-    function init() {
-      axios.get(getUrl).then(function (res) {
-        console.log(res.data)
-      })
-    }
-    init();
+      renderHTML(section1, edmVote, img1Data);
+      renderHTML(section2, roadVote, img2Data);
+    })();
   </script>
-  <!-- <script>
-    axios.post('https://script.google.com/macros/s/AKfycbzuH9eJCSjCnCuOqSFPPAx1oHeahUJZuqG15J1n/exec',{
-      data: {
-        
-      }
-    }).then(function (res) {
-      console.log(res)
-    })
-  </script> -->
+  <script src="js/config.js"></script>
+  <script src="js/all.js"></script>
+
 </body>
 
 </html>

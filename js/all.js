@@ -1,58 +1,122 @@
-$(function () {
+(function () {
+  // DOM
+  const form = document.querySelector('form');
+  const submitBtn = document.querySelector('#submit');
+  const employeeID = document.querySelector('#employeeID');
+  const edmVote = document.querySelector('#edmVote');
+  const roadVote = document.querySelector('#roadVote');
+  const fullSiteVote = document.querySelector('#fullSiteVote');
+  const inputValidate = document.querySelectorAll('.validate');
+  const voteCountNum = document.querySelector('.voteCountNum');
 
-  // [側邊選單] 
-  var $sidenav = $('.sidenav');
-  // [側邊選單]--// 收合
-  $sidenav.on('click', '.sidenav__btn a', function (e) {
-    e.preventDefault();
-    $(this).parents('.sidenav').toggleClass('sidenav--hide');
-  })
+  let totalEmployeeID = []; // total employee id
+  let totalVotesID = []; // total votes id
 
-  // [右邊選單]
-  var $rightNav = $('.sidenav--right');
-  // [右邊選單]--// 側選單是
-  var $sidenavTop = $rightNav.length > 0 ? $rightNav.offset().top : 0;
-  // [右邊選單]--// 手機版置頂
-  function rightnavFixedTop() {
-    var $windowTop = $(window).scrollTop();
-    if ($windowTop > $sidenavTop) {
-      $sidenav.addClass('fixed');
-      $('.main').addClass('addPadding')
-    }
-    else {
-      $sidenav.removeClass('fixed');
-      $('.main').removeClass('addPadding')
-    }
+  // init
+  function init() {
+    getEmployeeData();
+    getVotesData();
+  }
+  init();
+
+  // get employee data
+  function getEmployeeData() {
+    axios.get(getIDUrl).then(function (res) {
+      let data = res.data.feed.entry;
+      filterEmployeeID(data);
+    });
   }
 
-  // [右邊GoTop]--// 滾動出現
-  function goTopShow() {
-    var $windowTop = $(window).scrollTop();
-    $windowTop >= 100 ? $('.gotop').addClass('show') : $('.gotop').removeClass('show');
+  // filter employee id
+  function filterEmployeeID(data) {
+    data.forEach(function (item, index) {
+      if (index > 1 && index % 2 == 0) {
+        totalEmployeeID.push(item.content['$t']);
+      }
+    });
+    console.log(totalEmployeeID);
   }
-  // [右邊GoTop]--// gotop
-  $('.gotop').on('click', function () {
-    $('html,body').animate({ scrollTop: '0px' }, 300);
-  });
 
-  // [錨點]--// 判斷滑動位置
-  $('a[href^="#"]').on('click', function (e) {
+  // get total votes data
+  function getVotesData() {
+    axios.get(getUrl).then(function (res) {
+      let data = res.data.feed.entry;
+      let totalVotesNum = (data.length - 5) / 5;
+      voteCountNum.textContent = totalVotesNum;
+      filterVotesId(data);
+    });
+  }
+
+  // filter votes id
+  function filterVotesId(data) {
+    data.forEach(function (item, index) {
+      if (index > 4 && (index - 1) % 5 == 0) {
+        totalVotesID.push(item.content['$t']);
+      }
+    });
+    console.log(totalVotesID);
+  }
+
+  // form validate
+  function submitForm(e) {
     e.preventDefault();
-    var headerH = $('.header').height();
-    var sidenavH = $('.sidenav').height();
-    var targetTop = $($(this).attr('href')).offset().top;
-    var scrollPos = $(window).width() >= 768 ? targetTop : targetTop - headerH - sidenavH;
-    $('html, body').stop().animate({
-      scrollTop: scrollPos
-    }, 300);
+    let formValidate = [...inputValidate].some(function (item) {
+      return item.value == '';
+    });
+    if (formValidate) {
+      inputValidate.forEach(function (item) {
+        if (item.value == '') {
+          item.nextElementSibling.textContent = '此欄位為必填';
+        }
+      });
+      return;
+    }
+    const employeeIDValue = employeeID.value.toUpperCase().trim();
+    if (totalEmployeeID.length !== 0 && totalEmployeeID.indexOf(employeeIDValue) === -1) {
+      alert('你/妳 似乎沒有投票資格哦~~ ^_^');
+      employeeID.nextElementSibling.textContent = '員工編號有誤';
+      return;
+    }
+    if (totalVotesID.length !== 0 && totalVotesID.indexOf(employeeIDValue) !== -1) {
+      alert('此員工編號已經投過了');
+      employeeID.nextElementSibling.textContent = '此員工編號已經投過';
+      return;
+    }
+    let data = {
+      [inputName[0]]: employeeIDValue,
+      [inputName[1]]: edmVote.value,
+      [inputName[2]]: roadVote.value,
+      [inputName[3]]: fullSiteVote.value,
+    };
+    submitBtn.classList.add('pointer-none');
+    submitBtn.textContent = '表單送出中...';
+    $.ajax({
+      type: 'POST',
+      url: postUrl,
+      data: data,
+      contentType: 'application/json',
+      dataType: 'jsonp',
+      complete: function () {
+        alert('投票成功!!感謝您的意見');
+        submitBtn.textContent = '已投票成功!';
+        form.reset();
+        getVotesData();
+      },
+    });
+  }
+
+  // input change listener
+  inputValidate.forEach(function (item) {
+    item.addEventListener('change', function () {
+      if (item.value == '') {
+        const name = item.getAttribute('name');
+        item.nextElementSibling.textContent = '此欄位為必填';
+      } else {
+        item.nextElementSibling.textContent = '';
+      }
+    });
   });
 
-
-  $(window).on('scroll', function () {
-    goTopShow();
-    $(window).width() < 768 && rightnavFixedTop();
-  }).scroll();
-
-
-
-});
+  // listener
+  submitBtn.addEventListener('click', submitForm);
+})();
