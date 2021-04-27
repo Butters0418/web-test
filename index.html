@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>【PChome24h購物】投票頁</title>
+  <title>【PChome24h購物】設計組投票頁</title>
   <meta name="title" content="【PChome24h購物】">
   <meta name="keywords" content="APP,好康,PChome,24h,24h購物">
   <meta name="description" content="台北市6小時到貨(試營運)，全台灣24小時到貨！">
@@ -32,30 +32,10 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <div class="header">
-    <!-- max-width 1060px -->
-    <a class="header--mb" href="https://24h.m.pchome.com.tw/"><img class="header__img--mb" src="img/source/24HLOGO.png" alt="【PChome24h購物】"></a>
-    <!-- min-width 1060px -->
-    <div class="header--pc header__container">
-      <a href="https://24h.pchome.com.tw/"><img class="header__img" src="img/source/header_01.png" alt="【PChome24h購物】"></a>
-      <a href="https://24h.pchome.com.tw/"><img class="header__img" src="img/source/header_02.png" alt="全台24小時到貨"></a>
-      <a href="https://ecvip.pchome.com.tw/?m=myaccount&f=show24hHelp" target="_blank"><span class="header__text">例外說明</span></a>
-      <div class="header__download">
-        <span class="header__text header__text--danger">APP下載</span>
-        <a class="header__dropdown" href="https://24h.m.pchome.com.tw/appget.php"><img src="img/source/QRCode.png"></a>
-      </div>
-      <p class="header__text border-0">追蹤我們</p>
-      <ul class="header__icon-list">
-        <li><a href="https://www.facebook.com/pchome24h/" target="_blank"><img src="img/source/fb_new.svg"></a></li>
-        <li><a href="https://www.instagram.com/pchome24h/" target="_blank"><img src="img/source/ig_new.svg"></a></li>
-        <li><a href="https://www.youtube.com/channel/UCb2aGEzl5Ki5juwPolnC-PA" target="_blank"><img src="img/source/youtube_new.svg"></a></li>
-        <li><a href="https://line.me/R/ti/p/@pchome24h" target="_blank"><img src="img/source/line_new.svg"></a></li>
-      </ul>
-    </div>
-  </div>
-  <!-- END Header -->
 
+  <header>
+    <p>設計組投票頁<br>(請使用外網or手機進行投票)</p>
+  </header>
   <!-- Main -->
   <div class="main">
     <!-- EDM -->
@@ -88,52 +68,66 @@
       </div>
     </section>
 
-    <!-- 表單 -->
+    <!-- 全站 -->
     <section class="section4">
       <div class="container">
-        <p class="remind">請填寫自己喜愛的作品，一個類別一票，每個員編限投一次</p>
-        <p class="voteCount">目前投票人數:<span class="voteCountNum">0</span> 票</p>
+        <h3 class="section-title">異業活動</h3>
+        <div class="row">
+          <!-- in js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 表單 -->
+    <section class="section5">
+      <div class="container">
+        <p class="remind">請填寫自己喜愛的作品，一個類別一票(共四票)<br>每個員編限投一次<span>(4/27 18:00截止)</span></p>
+        <p class="voteCount">目前投票人數:<span class="voteCountNum">0</span> 人</p>
         <form class="form-row">
           <div class="form-group col-md-12 mb-5">
             <label for="employeeID">
-              <h4>請填寫您的員工編號 *</h4>
+              <h4>請填寫您的員工編號<span> *</span></h4>
             </label>
             <input type="text" class="form-control validate" placeholder="PCA12345" id="employeeID">
             <p class="error-text"></p>
           </div>
           <div class="form-group col-md-12 mb-5">
             <label for="edmVote">
-              <h4>選擇您喜愛的 EDM設計 *</h4>
+              <h4>選擇您喜愛的 EDM設計<span> *</span></h4>
             </label>
             <select id="edmVote" class="form-control validate">
               <option value selected="selected" disabled>請選擇項目</option>
-
+              <!-- in js -->
             </select>
             <p class="error-text"></p>
           </div>
           <div class="form-group col-md-12 mb-5">
             <label for="roadVote">
-              <h4>選擇您喜愛的 路標頁設計 *</h4>
+              <h4>選擇您喜愛的 路標頁設計<span> *</span></h4>
             </label>
             <select id="roadVote" class="form-control validate">
               <option value selected="selected" disabled>請選擇項目</option>
-              <option value="作品1">作品1</option>
-              <option value="作品2">作品2</option>
-              <option value="作品3">作品3</option>
-              <option value="作品4">作品4</option>
+              <!-- in js -->
             </select>
             <p class="error-text"></p>
           </div>
           <div class="form-group col-md-12 mb-5">
             <label for="fullSiteVote">
-              <h4>選擇您喜愛的 全站設計 *</h4>
+              <h4>選擇您喜愛的 全站設計<span> *</span></h4>
             </label>
             <select id="fullSiteVote" class="form-control validate">
               <option value selected="selected" disabled>請選擇項目</option>
-              <option value="作品1">作品1</option>
-              <option value="作品2">作品2</option>
-              <option value="作品3">作品3</option>
-              <option value="作品4">作品4</option>
+              <!-- in js -->
+            </select>
+            <p class="error-text"></p>
+          </div>
+          <div class="form-group col-md-12 mb-5">
+            <label for="different">
+              <h4>選擇您喜愛的 異業設計<span> *</span></h4>
+            </label>
+            <select id="different" class="form-control validate">
+              <option value selected="selected" disabled>請選擇項目</option>
+              <!-- in js -->
             </select>
             <p class="error-text"></p>
           </div>
@@ -156,6 +150,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/day.min.js"></script>
   <script src="js/normal.js"></script>
   <script>
     (function () {
@@ -257,14 +252,63 @@
           imgLarge: 'img/road/b12.jpg',
         },
       ]
+      // 全站 images data
+      let img3Data = [
+        {
+          imgSmall: 'img/fullsite/a1_c.jpg',
+          imgLarge: 'img/fullsite/a1.jpg',
+        },
+        {
+          imgSmall: 'img/fullsite/a2_c.jpg',
+          imgLarge: 'img/fullsite/a2.jpg',
+        },
+        {
+          imgSmall: 'img/fullsite/a3_c.jpg',
+          imgLarge: 'img/fullsite/a3.jpg',
+        },
+        {
+          imgSmall: 'img/fullsite/a4_c.jpg',
+          imgLarge: 'img/fullsite/a4.jpg',
+        },
+        {
+          imgSmall: 'img/fullsite/a5_c.jpg',
+          imgLarge: 'img/fullsite/a5.jpg',
+        },
+        {
+          imgSmall: 'img/fullsite/a6_c.jpg',
+          imgLarge: 'img/fullsite/a6.jpg',
+        },
+      ]
+      // 異業 images data
+      let img4Data = [
+        {
+          imgSmall: 'img/different/a1_c.jpg',
+          imgLarge: 'img/different/a1.jpg',
+        },
+        {
+          imgSmall: 'img/different/a2_c.jpg',
+          imgLarge: 'img/different/a2.jpg',
+        },
+        {
+          imgSmall: 'img/different/a3_c.gif',
+          imgLarge: 'img/different/a3.jpg',
+        },
+        {
+          imgSmall: 'img/different/a4_c.jpg',
+          imgLarge: 'img/different/a4.jpg',
+        },
+      ]
 
       // DOM
       const section1 = document.querySelector('.section1 .row');
       const section2 = document.querySelector('.section2 .row');
       const section3 = document.querySelector('.section3 .row');
+      const section4 = document.querySelector('.section4 .row');
       const edmVote = document.querySelector('#edmVote');
       const roadVote = document.querySelector('#roadVote');
       const fullSiteVote = document.querySelector('#fullSiteVote');
+      const differentVote = document.querySelector('#different');
+      const submitBtn = document.querySelector('#submit');
 
       // render data to html
       function renderHTML(htmlDom, id, data) {
@@ -287,6 +331,17 @@
       }
       renderHTML(section1, edmVote, img1Data);
       renderHTML(section2, roadVote, img2Data);
+      renderHTML(section3, fullSiteVote, img3Data);
+      renderHTML(section4, differentVote, img4Data);
+
+      // 投票時間切換
+      let deadLine = '2021-04-27 18:00';
+      let newDeadLine = dayjs(deadLine);
+      let today = dayjs(new Date());
+      if (newDeadLine.isBefore(today)) {
+        submitBtn.textContent = '活動已結束';
+        submitBtn.classList.add('end');
+      }
     })();
   </script>
   <script src="js/config.js"></script>

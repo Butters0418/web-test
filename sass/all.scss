@@ -11,6 +11,16 @@
     display: block;
   }
 }
+header p {
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: #448dc0;
+  color: #fff;
+  padding: 5px;
+  @include media($pad) {
+    font-size: 1.5rem;
+  }
+}
 section {
   &:nth-child(even) {
     background-color: #f1f1f1;
@@ -18,7 +28,7 @@ section {
   &:nth-child(odd) {
     background-color: #e4e4e4;
   }
-  &.section4 {
+  &.section5 {
     background-color: #448dc0;
   }
 }
@@ -28,7 +38,7 @@ section {
   @include media($pad) {
     padding: 20px 15px;
   }
-  .section4 & {
+  .section5 & {
     max-width: 600px;
   }
 }
@@ -68,8 +78,11 @@ a[data-fancybox] {
     opacity: 0.8;
   }
 }
+.fancybox-caption__body {
+  font-size: 1.5rem;
+}
 
-.section4 {
+.section5 {
   .form-row {
     background-color: #fff;
     padding: 30px;
@@ -79,11 +92,19 @@ a[data-fancybox] {
     color: #333;
     font-size: 1.25rem;
     margin-bottom: 0;
+    span {
+      color: red;
+    }
   }
   #submit {
     font-size: 1.25rem;
     &.pointer-none {
       pointer-events: none;
+    }
+    &.end {
+      pointer-events: none;
+      background-color: #ccc;
+      border-color: #ccc;
     }
   }
   .error-text {
@@ -96,6 +117,9 @@ a[data-fancybox] {
     color: #fff;
     margin-bottom: 10px;
     text-align: center;
+    span {
+      color: #fff229;
+    }
   }
   .voteCount {
     font-size: 1.5rem;

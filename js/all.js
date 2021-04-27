@@ -6,6 +6,7 @@
   const edmVote = document.querySelector('#edmVote');
   const roadVote = document.querySelector('#roadVote');
   const fullSiteVote = document.querySelector('#fullSiteVote');
+  const different = document.querySelector('#different');
   const inputValidate = document.querySelectorAll('.validate');
   const voteCountNum = document.querySelector('.voteCountNum');
 
@@ -41,7 +42,7 @@
   function getVotesData() {
     axios.get(getUrl).then(function (res) {
       let data = res.data.feed.entry;
-      let totalVotesNum = (data.length - 5) / 5;
+      let totalVotesNum = (data.length - 6) / 6;
       voteCountNum.textContent = totalVotesNum;
       filterVotesId(data);
     });
@@ -50,7 +51,7 @@
   // filter votes id
   function filterVotesId(data) {
     data.forEach(function (item, index) {
-      if (index > 4 && (index - 1) % 5 == 0) {
+      if (index > 5 && (index - 1) % 6 == 0) {
         totalVotesID.push(item.content['$t']);
       }
     });
@@ -73,7 +74,7 @@
     }
     const employeeIDValue = employeeID.value.toUpperCase().trim();
     if (totalEmployeeID.length !== 0 && totalEmployeeID.indexOf(employeeIDValue) === -1) {
-      alert('你/妳 似乎沒有投票資格哦~~ ^_^');
+      alert('您似乎沒有投票資格哦~~ ^_^');
       employeeID.nextElementSibling.textContent = '員工編號有誤';
       return;
     }
@@ -82,18 +83,19 @@
       employeeID.nextElementSibling.textContent = '此員工編號已經投過';
       return;
     }
-    let data = {
+    let formData = {
       [inputName[0]]: employeeIDValue,
       [inputName[1]]: edmVote.value,
       [inputName[2]]: roadVote.value,
       [inputName[3]]: fullSiteVote.value,
+      [inputName[4]]: different.value,
     };
     submitBtn.classList.add('pointer-none');
     submitBtn.textContent = '表單送出中...';
     $.ajax({
       type: 'POST',
       url: postUrl,
-      data: data,
+      data: formData,
       contentType: 'application/json',
       dataType: 'jsonp',
       complete: function () {
